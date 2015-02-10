@@ -34,4 +34,14 @@ url=`echo $url | sed -e "s/github\.com/${USER_ID}@github\.com/g"`
 echo $url
 git remote set-url origin $url
 
+#git config --list
+
+git config --global branch.master.mergeoptions "--no-ff"
+git config --global branch.develop.mergeoptions "--no-ff"
+git config --global merge.ff false
+
+git config --global branch.master.rebase true
+git config --global pull.rebase true
+git config --global pull.rebase preserve
+
 git config --list

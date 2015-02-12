@@ -16,3 +16,5 @@ yum install -y ${EPEL_RPM}
 yum install -y jq
 
 yum install -y hping3
+
+${script_dir}/consul_service.sh

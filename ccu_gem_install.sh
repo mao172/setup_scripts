@@ -9,7 +9,7 @@ RAKE_TOOL=${TOOLS_DIR}/rake
 
 WORK_DIR=`pwd`
 
-export PATH=/opt/chefdk/embedded/bin:$PATH
+# export PATH=/opt/chefdk/embedded/bin:$PATH
 cd ${WORK_DIR}
 
 ${GEM_TOOL} list | grep ${GEM_NAME}

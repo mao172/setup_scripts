@@ -1,6 +1,15 @@
 #!/bin/sh
+# 
+#
 
 script_dir=`dirname $0`
+
+service_mode=$1
+servers=$2
+
+if [ "${service_mode}" == "" ] ; then
+  service_mode=bootstrap
+fi
 
 REPO_NAME=cloudconductor_init
 GIT_URL=https://github.com/cloudconductor/cloudconductor_init.git
@@ -40,9 +49,9 @@ ${BUNDLE_TOOL} exec berks vendor cookbooks
 
 mkdir ./roles
 
-echo '{"name":"setup","description":"Setup Role","chef_type":"role","json_class":"Chef::Role","run_list":["consul::_service"]}' | jq '.' > ./roles/setup.json
+echo '{"name":"setup","description":"Setup Role","chef_type":"role","json_class":"Chef::Role","run_list":["consul::install_source","consul::_service"]}' | jq '.' > ./roles/setup.json
 
-echo '{"run_list":["role[setup]"]}' | jq '.' > ./dna.json
+echo "{\"consul\":{\"service_mode\":\"${service_mode}\",\"servers\":[\"${servers}\"]},\"run_list\":[\"role[setup]\"]}" | jq '.' > ./dna.json
 
 if [ ! -f ./solo.rb ] ; then
   cp ${script_dir}/files/solo.rb ./solo.rb

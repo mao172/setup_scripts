@@ -1,0 +1,42 @@
+{
+"cloudconductor" : {
+  "patterns" : {
+    "tomcat_cluster_pattern" : {
+      "user_attributes" : {}
+    }
+  },
+  "applications" : {
+    "[app_name1]" : {
+      "version" : "",
+      "force_update" : "",
+      "protocol" : "",
+      "url" : "",
+      "revision" : "",
+      "parameters" : {
+        "basic_auth" : "",
+        "auth_user" : "",
+        "auth_password" : "",
+        "app_port" : "",
+        "database" : ""
+      },
+      "type" : "platform",
+      "domain_name" : "",
+      "pre_deploy" : "",
+      "post_deploy" : "",
+      "base_path" :""
+    },
+    "[app_name2]" : {
+      "type" : "static"
+    },
+    "[app_name3]" : {
+      "type" : "static"
+    },
+    "[app_name4]" : {
+      "type" : "optional"
+      
+    }
+  },
+  "ap_host" : "",
+  "db_host" : ""
+}
+}

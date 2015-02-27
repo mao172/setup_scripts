@@ -17,6 +17,6 @@ yum install -y jq
 
 yum install -y hping3
 
-${script_dir}/consul_service.sh
+#${script_dir}/consul_service.sh
 
 gem install serverspec

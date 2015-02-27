@@ -1,0 +1,9 @@
+{
+  "watches" : [
+    {
+      "type" : "checks",
+      "service" : "postgresql",
+      "handler" : "/opt/consul/event_handler/check-state-event-handler"
+    }
+  ]
+}

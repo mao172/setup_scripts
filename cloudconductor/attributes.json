@@ -3,6 +3,9 @@
   "patterns" : {
     "tomcat_cluster_pattern" : {
       "user_attributes" : {}
+    },
+    "tomcat_pattern" : {
+      "user_attributes" : {}
     }
   },
   "applications" : {
@@ -34,6 +37,14 @@
     "[app_name4]" : {
       "type" : "optional"
       
+    },
+    "sample" : {
+      "type" : "dynamic",
+      "protocol" : "http",
+      "url" : "https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war"
+    },
+    "examples" : {
+      "type" : "dynamic"
     }
   },
   "ap_host" : "",

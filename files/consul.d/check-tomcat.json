@@ -1,0 +1,9 @@
+{
+  "check" : {
+    "id" : "service:tomcat:check",
+    "name" : "service tomcat check",
+    "script" : "curl http://localhost:8080/",
+    "interval" : "10s",
+    "service_id" : "tomcat"
+  }
+}

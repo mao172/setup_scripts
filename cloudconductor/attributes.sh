@@ -3,7 +3,7 @@
 source /opt/cloudconductor/config
 export PATH=${PATH}:/opt/chefdk/embedded/bin
 CONSUL_SECRET_KEY_ENCODED=`ruby -e "require 'cgi'; puts CGI::escape('${CONSUL_SECRET_KEY}')"`
-
+echo "CONSUL_SECRET_KEY_ENCODED=${CONSUL_SECRET_KEY_ENCODED}"
 
 script_dir=`dirname $0`
 

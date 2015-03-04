@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -x
 #
 # ${1} - pattern name ex: tomcat_claster_pattern
 # ${2} - role (lb, web, ap, db)
@@ -23,4 +23,8 @@ TOOLS_DIR=/opt/chefdk/embedded/bin
 BUNDLE_TOOL=${TOOLS_DIR}/bundle
 
 ${BUNDLE_TOOL} config build.nokogiri --use-system-libraries
-bash -x /opt/cloudconductor/bin/init.sh
+. /opt/cloudconductor/bin/init.sh
+
+script_dir=`dirname $0`
+. ${script_dir}/curl_config.sh
+. ${script_dir}/consul_webui.sh

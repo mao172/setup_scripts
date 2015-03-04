@@ -1,0 +1,9 @@
+{
+  "check" : {
+    "id" : "service:apache:check",
+    "name" : "service apache check",
+    "script" : "curl http://localhost:80",
+    "interval" : "10s",
+    "service_id" : "httpd"
+  }
+}

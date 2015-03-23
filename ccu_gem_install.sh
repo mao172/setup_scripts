@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -x
 
 GEM_NAME=cloud_conductor_utils
 GIT_URL=https://github.com/cloudconductor/cloud_conductor_utils.git
